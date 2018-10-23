@@ -87,7 +87,7 @@ def login():
         	login_user(user)
         if user.is_admin is True:
         	return 'admin'
-        return 'nsoi'
+        return f'welcome {username}'
     else:
     	print(form.errors)
     return render_template('login.html', form=form, error='')
